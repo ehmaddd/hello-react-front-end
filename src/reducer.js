@@ -1,15 +1,15 @@
 // src/reducer.js
 const initialState = {
-    greeting: ''
-  };
+  greeting: '',
+};
 
-  const reducer = (state = initialState, action) => {
-    switch (action.type) {
-      case 'SET_GREETING':
-        return { ...state, greeting: action.payload };
-      default:
-        return state;
-    }
-  };
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'SET_GREETING':
+      return { ...state, greeting: action.payload };
+    default:
+      return state;
+  }
+};
 
-  export default reducer;
+export default reducer;
