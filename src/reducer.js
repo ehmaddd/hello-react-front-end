@@ -3,7 +3,7 @@ const initialState = {
   greeting: '',
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (action, state = initialState) => {
   switch (action.type) {
     case 'SET_GREETING':
       return { ...state, greeting: action.payload };
