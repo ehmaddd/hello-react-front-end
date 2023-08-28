@@ -1,6 +1,5 @@
-// src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -9,9 +8,11 @@ import App from './App';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
 );
